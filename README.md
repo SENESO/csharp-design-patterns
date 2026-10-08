@@ -1,6 +1,6 @@
 # csharp-design-patterns
 
-Seven classic design patterns in C#, each as a small self-contained console demo. Pick a pattern from the menu and watch it run.
+Eight classic design patterns in C#, each as a small self-contained console demo. Pick a pattern from the menu and watch it run.
 
 ```bash
 dotnet run --project src/DesignPatterns
@@ -17,6 +17,7 @@ dotnet run --project src/DesignPatterns
 | 5 | Decorator | `src/DesignPatterns/Patterns/Decorator` | You need to add behavior (logging, caching) without subclassing everything |
 | 6 | Repository + Unit of Work | `src/DesignPatterns/Patterns/RepositoryUnitOfWork` | Business logic shouldn't depend on EF Core/SQL directly; changes commit together |
 | 7 | Dependency Injection | `src/DesignPatterns/Patterns/DependencyInjection` | A class needs collaborators but shouldn't create them itself |
+| 8 | Mediator | `src/DesignPatterns/Patterns/Mediator` | Many objects must communicate without referencing each other directly (think MediatR) |
 
 Each file starts with a `WHEN TO USE` comment explaining the problem the pattern solves. The Repository demo is in-memory so it runs without a database — swap in an EF Core repository in a real app and the calling code doesn't change.
 
