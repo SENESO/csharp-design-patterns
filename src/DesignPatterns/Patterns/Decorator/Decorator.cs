@@ -1,5 +1,7 @@
 namespace DesignPatterns.Patterns.Decorator;
 
+using System.Collections.Concurrent;
+
 // WHEN TO USE: you need to add behavior to an object (logging, caching,
 // validation) without modifying its class and without an explosion of
 // subclasses for every behavior combination. Decorators stack.
@@ -38,7 +40,9 @@ public class LoggingOrderService : OrderServiceDecorator
 
 public class CachingOrderService : OrderServiceDecorator
 {
-    private readonly Dictionary<int, string> _cache = new();
+    // ConcurrentDictionary: the decorator stays correct if two threads
+    // request the same order at once (a plain Dictionary would corrupt).
+    private readonly ConcurrentDictionary<int, string> _cache = new();
 
     public CachingOrderService(IOrderService inner) : base(inner) { }
 

@@ -1,3 +1,4 @@
+using DesignPatterns.Patterns.Builder;
 using DesignPatterns.Patterns.Decorator;
 using DesignPatterns.Patterns.DependencyInjection;
 using DesignPatterns.Patterns.FactoryMethod;
@@ -17,6 +18,7 @@ var demos = new Dictionary<string, (string Name, Action Run)>
     ["6"] = ("Repository + Unit of Work", RepositoryUnitOfWorkDemo.Run),
     ["7"] = ("Dependency Injection", DependencyInjectionDemo.Run),
     ["8"] = ("Mediator", MediatorDemo.Run),
+    ["9"] = ("Builder", BuilderDemo.Run),
 };
 
 while (true)

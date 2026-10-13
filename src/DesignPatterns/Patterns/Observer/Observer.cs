@@ -43,7 +43,9 @@ public class Stock
 
     private void Notify()
     {
-        foreach (var investor in _investors)
+        // Snapshot the list: an observer may detach (or attach) inside Update(),
+        // and enumerating the live list would throw InvalidOperationException.
+        foreach (var investor in _investors.ToList())
             investor.Update(Symbol, _price);
     }
 }

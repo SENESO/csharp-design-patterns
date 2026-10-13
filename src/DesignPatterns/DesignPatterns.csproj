@@ -1,10 +1,28 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>SENESO.csharp-design-patterns</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Eslam Ashraf</Authors>
+    <Description>Nine classic design patterns in C# — Singleton, Factory Method, Strategy, Observer, Decorator, Repository + Unit of Work, Dependency Injection, Mediator, and Builder — each as a small self-contained console demo with WHEN-TO-USE guidance.</Description>
+    <PackageTags>csharp;dotnet;design-patterns;singleton;factory;strategy;observer;decorator;repository;dependency-injection;mediator;builder</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/SENESO/csharp-design-patterns</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/SENESO/csharp-design-patterns</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
